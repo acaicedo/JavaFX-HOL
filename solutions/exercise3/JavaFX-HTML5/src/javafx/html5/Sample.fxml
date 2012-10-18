@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml" fx:controller="javafx.html5.SampleController">
+  <children>
+    <Accordion id="conference" fx:id="conferenceAccordion" layoutX="38.0" minWidth="191.0" prefHeight="328.0" prefWidth="191.0" AnchorPane.bottomAnchor="75.0" AnchorPane.topAnchor="47.0">
+      <effect>
+        <Reflection fraction="0.16269841269841268" topOpacity="0.5555555555555556" />
+      </effect>
+    </Accordion>
+    <WebView fx:id="webView" prefHeight="328.0" prefWidth="406.0" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="44.0" AnchorPane.topAnchor="47.0">
+      <effect>
+        <Reflection fraction="0.17857142857142855" topOpacity="0.4285714285714286" />
+      </effect>
+    </WebView>
+  </children>
+</AnchorPane>

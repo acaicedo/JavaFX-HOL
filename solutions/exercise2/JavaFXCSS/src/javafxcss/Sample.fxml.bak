@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="200.0" prefWidth="320.0" xmlns:fx="http://javafx.com/fxml" fx:controller="javafxcss.SampleController">
+  <children>
+    <AnchorPane layoutX="52.0" layoutY="30.0" prefHeight="140.0" prefWidth="218.0" styleClass="my-gradientpane">
+      <children>
+        <Button fx:id="button" layoutX="61.0" layoutY="44.0" onAction="#handleButtonAction" text="Click Me!" />
+        <Label fx:id="label" layoutX="62.0" layoutY="91.0" minHeight="16.0" minWidth="69.0" prefWidth="80.0" text="Testing CSS" />
+      </children>
+    </AnchorPane>
+  </children>
+  <stylesheets>
+    <URL value="@FirstCSS.css" />
+  </stylesheets>
+</AnchorPane>

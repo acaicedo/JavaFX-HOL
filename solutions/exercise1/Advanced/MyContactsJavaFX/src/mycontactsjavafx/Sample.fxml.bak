@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="555.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml" fx:controller="mycontactsjavafx.SampleController">
+  <children>
+    <SplitPane dividerPositions="0.3007518796992481" focusTraversable="true" prefHeight="496.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="59.0">
+      <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+          <children>
+            <TabPane id="leftTabP" prefHeight="494.0" prefWidth="237.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <tabs>
+                <Tab text="Contacts">
+                  <content>
+                    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                      <children>
+                        <ListView id="contactLst" fx:id="contactList" onInputMethodTextChanged="#xxContact" onMouseClicked="#actionContact" prefHeight="435.0" prefWidth="210.0" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
+                      </children>
+                    </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+          </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="598.0" prefWidth="554.9999000000025">
+          <children>
+            <TabPane id="rightTabP" prefHeight="494.0" prefWidth="555.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <tabs>
+                <Tab text="Personal Information">
+                  <content>
+                    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                      <children>
+                        <AnchorPane prefHeight="190.0" prefWidth="505.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="30.0">
+                          <children>
+                            <Label layoutX="30.0" layoutY="30.0" text="Name:" />
+                            <Label layoutX="30.0" layoutY="55.0" text="Last Name:" />
+                            <Label layoutX="30.0" layoutY="80.0" text="Nickname:" />
+                            <Label layoutX="30.0" layoutY="105.0" text="Telephone:" />
+                            <Label layoutX="30.0" layoutY="130.0" text="Occupation:" />
+                            <TextField fx:id="nameTxtF" layoutY="27.0" prefWidth="265.0" AnchorPane.leftAnchor="86.0" AnchorPane.rightAnchor="124.0" />
+                            <TextField id="surnameTxtF" fx:id="lastNameTxtF" layoutY="52.0" prefWidth="265.0" AnchorPane.leftAnchor="86.0" AnchorPane.rightAnchor="124.0" />
+                            <TextField id="nickname" fx:id="nicknameTxtF" layoutY="77.0" prefWidth="265.0" AnchorPane.leftAnchor="86.0" AnchorPane.rightAnchor="124.0" />
+                            <TextField fx:id="phoneTxtF" layoutY="102.0" prefWidth="265.0" AnchorPane.leftAnchor="86.0" AnchorPane.rightAnchor="124.0" />
+                            <TextField fx:id="occupationTxtF" layoutY="127.0" prefWidth="380.0" AnchorPane.leftAnchor="86.0" AnchorPane.rightAnchor="9.0" />
+                            <ImageView id="icon" fitHeight="101.0" fitWidth="99.0" pickOnBounds="true" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="3.0">
+                              <image>
+                                <Image url="@icon.png" preserveRatio="true" smooth="true" />
+                              </image>
+                            </ImageView>
+                          </children>
+                          <padding>
+                            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                          </padding>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="505.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="219.0">
+                          <children>
+                            <Label layoutX="30.0" layoutY="30.0" text="E-mail:" />
+                            <TextField id="emailTxt" fx:id="emailTxtF" layoutY="27.0" prefWidth="301.0" AnchorPane.leftAnchor="84.0" AnchorPane.rightAnchor="110.0" />
+                            <Button mnemonicParsing="false" onAction="#addAction" prefWidth="90.0" text="Add" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="7.0" />
+                            <Button mnemonicParsing="false" onAction="#editAction" prefWidth="90.0" text="Edit" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="38.0" />
+                            <Button mnemonicParsing="false" onAction="#removeAction" prefWidth="90.0" text="Remove" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="68.0" />
+                            <Button mnemonicParsing="false" prefWidth="90.0" text="As Default" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="99.0" />
+                            <ListView fx:id="emailList" prefHeight="128.0" prefWidth="355.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="110.0" AnchorPane.topAnchor="38.0" />
+                            <Label fx:id="msgBarLbl" layoutX="30.0" prefHeight="21.0" prefWidth="471.0" AnchorPane.bottomAnchor="-20.0" />
+                          </children>
+                          <padding>
+                            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                          </padding>
+                        </AnchorPane>
+                      </children>
+                    </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Work Information">
+                  <content>
+                    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </Tab>
+                <Tab text="Miscellaneous">
+                  <content>
+                    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+    <AnchorPane layoutY="14.0" prefHeight="38.0" prefWidth="800.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0">
+      <children>
+        <HBox id="HBox" alignment="CENTER" layoutX="26.0" layoutY="8.0" spacing="5.0">
+          <children>
+            <Button mnemonicParsing="false" onAction="#newContact" prefHeight="20.0" prefWidth="115.0" text="New Contact" />
+            <Button mnemonicParsing="false" onAction="#saveContact" prefHeight="20.0" prefWidth="115.0" text="Save Contact" />
+            <Button mnemonicParsing="false" onAction="#deleteContact" prefHeight="20.0" prefWidth="115.0" text="Delete Contact" />
+          </children>
+        </HBox>
+        <Label fx:id="contactsMsg" layoutX="400.0" layoutY="11.0" />
+      </children>
+    </AnchorPane>
+  </children>
+</AnchorPane>

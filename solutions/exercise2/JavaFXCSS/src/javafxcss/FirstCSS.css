@@ -1,0 +1,23 @@
+.root {
+    master-color: black;
+    -fx-background: derive(master-color, 40%);
+    -fx-control-inner-background: derive(master-color, 60%);   
+}
+
+.my-gradientpane {
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-width: 8;
+    -fx-border-color: radial-gradient(radius 100%, derive(master-color,20%), derive(master-color,80%));
+    -fx-background-color: radial-gradient(radius 100%, derive(master-color,80%), derive(master-color,30%));
+}
+
+.button {
+    -fx-background-color: derive(master-color,60%), derive(master-color,20%), derive(master-color,25%), linear-gradient(to bottom, derive(master-color,70%), derive(master-color,10%));
+    -fx-text-fill: derive(master-color,110%);
+    -fx-padding: 10;
+}
+
+.label{
+    -fx-text-fill: derive(master-color,110%);
+}

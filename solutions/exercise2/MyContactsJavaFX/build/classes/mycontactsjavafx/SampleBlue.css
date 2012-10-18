@@ -1,0 +1,78 @@
+.theme {
+    master-color: darkblue;
+    -fx-background-color: derive(master-color, 40%);
+    -fx-control-inner-background: derive(master-color, 60%);
+    -fx-font-size: 14px;
+}
+
+.split-pane {
+    -fx-padding: 20;
+    -fx-background-radius: 10;
+    -fx-background-color: derive(master-color, 30%);
+    -fx-border-color: derive(master-color, 90%);
+    -fx-border-radius: 10;
+}
+
+.split-pane *.split-pane-divider {
+    -fx-background-color: derive(master-color, 30%);
+    -fx-border-color: derive(master-color, 50%);;
+}
+
+
+/*    -fx-background-color: -fx-shadow-highlight-color, -fx-tab-border-color, -fx-inner-border, -fx-body-color;*/
+.tab {
+    -fx-background-color: linear-gradient(to bottom, derive(-fx-base,90%), derive(-fx-base,-50%)), linear-gradient(to top, master-color, derive(-fx-base,-20%));
+}
+
+.tab-content-area {
+    -fx-background-color: derive(master-color, 40%);
+}
+
+.tab .tab-label {
+    -fx-text-fill: derive(-fx-base,60%);
+}    
+
+.tab-pane *.tab-header-background {
+    -fx-background-color: derive(master-color, 25%);
+}
+
+
+.darkList {
+    -fx-background-color: derive(master-color, -60%);
+}
+
+.darkList .list-cell {
+    -fx-padding: 6 6 6 6;
+    -fx-background-color: derive(master-color, 30%);
+    -fx-background-radius: 3;
+    -fx-border-radius: 3;
+    -fx-border-color: linear-gradient(to bottom, derive(-fx-base,-30%), derive(-fx-base,-50%));
+    -fx-text-fill: derive(master-color, 140%);;
+}
+
+.darkList .list-cell:focused {
+    -fx-text-fill: white;
+}
+
+.table-view {
+    -fx-border-width: 0;
+    -fx-border-color: red;
+}
+
+
+.text-field {
+    /*     -fx-background-color: -fx-shadow-highlight-color, -fx-text-box-border, -fx-control-inner-background;*/
+    -fx-background-color:  transparent, derive(master-color, 60%), derive(master-color, 30%);
+    -fx-padding: 3 6 3 6;
+    -fx-border-width: 10;
+}
+
+.label {
+    -fx-text-fill: derive(master-color, 180%);
+    /*-fx-font-size: 18px;*/
+}
+
+.my-gradientpane {
+    -fx-background-radius: 10;
+    -fx-background-color: radial-gradient(radius 100%, derive(master-color,-60%), derive(master-color,-80%));
+}

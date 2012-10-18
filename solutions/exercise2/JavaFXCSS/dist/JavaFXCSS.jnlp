@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="JavaFXCSS.jnlp">
+  <information>
+    <title>JavaFXCSS</title>
+    <vendor>angelacaicedo</vendor>
+    <description>Sample JavaFX 2.0 application.</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <jfx:javafx-runtime version="2.1+" href="http://javadl.sun.com/webapps/download/GetFile/javafx-latest/windows-i586/javafx2.jnlp"/>
+  </resources>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="JavaFXCSS.jar" size="19796" download="eager" />
+  </resources>
+<security>
+  <all-permissions/>
+</security>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="JavaFXCSS" >
+    <param name="requiredFXVersion" value="2.1+"/>
+  </applet>
+  <jfx:javafx-desc  width="800" height="600" main-class="javafxcss.JavaFXCSS"  name="JavaFXCSS" />
+  <update check="always"/>
+</jnlp>
